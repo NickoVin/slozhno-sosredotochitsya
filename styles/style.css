@@ -16,7 +16,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-top: 49px;
+  margin-top: 23px;
 }
 
 .header__theme-menu-list {
@@ -63,12 +63,29 @@
   height: 9px;
   border-radius: 7.5px;
   background-color: var(--accent-color);
-  margin-block-end: 1px;
+  margin-block-end: 2px;
   margin-inline-start: 10px;
   margin-inline-end: 9px;
 }
 
-.dot {
-  width: 9px;
-  height: 9px;
+.header::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  justify-self: end;
+}
+
+.title {
+  font-family: IBM Plex Mono;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--title-color);
+  margin-top: 50px;
+  text-shadow: 4px 4px var(--accent-color);
 }
