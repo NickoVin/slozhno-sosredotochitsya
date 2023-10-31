@@ -2,13 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  width: 375px;
-  margin: 0 auto;
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
 }
 
 .header {
   display: grid;
+  background-image: var(--background_image);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
   grid-row: repeat(3, 1fr);
   padding: 10px;
@@ -31,6 +34,7 @@
   width: 100%;
   height: 100%;
   border: none;
+  color: var(--accent-color);
   background-color: transparent;
   text-transform: lowercase;
   font-family: 'IBM Plex Mono', Arial, sans-serif;
@@ -42,11 +46,30 @@
   padding-bottom: 5px;
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+/* Чёт криво работает */
+.header__theme-menu-button:hover {
+  border-color: var(--accent-color-alpha);
+}
+
 .rec {
   position: absolute;
   justify-self: end;
   font-family: 'IBM Plex Mono', Arial, sans-serif;
   text-transform: uppercase;
+  color: var(--accent-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -68,7 +91,7 @@
   margin-inline-end: 9px;
 }
 
-.header::before {
+.corner::before {
   content: '';
   display: inline-block;
   width: 25px;
@@ -76,16 +99,112 @@
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
   justify-self: end;
+  align-self: start;
+}
+
+.corner::after {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  justify-self: start;
+  align-self: end;
 }
 
 .title {
-  font-family: IBM Plex Mono;
-  font-size: 116px;
+  font-family: inherit;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  line-height: 96px;
+  line-height: 95.7px;
   letter-spacing: 0em;
   text-align: left;
   color: var(--title-color);
-  margin-top: 50px;
+  margin: 50px auto 54px auto;
   text-shadow: 4px 4px var(--accent-color);
+}
+
+.title-decore {
+  background-color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin: 0;
+}
+
+.header__content {
+  margin-bottom: 31px;
+}
+
+.header__content__text {
+  margin: 0;
+}
+
+.main {
+  margin-top: 39px;
+  padding: 0 10px 0 10px;
+}
+
+.section {
+  display: grid;
+  margin-bottom: 30px;
+}
+
+.section__two-columns {
+  grid-template-columns: 1fr;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--accent-color);
+  text-align: left;
+  margin: 0 auto 21px auto;
+}
+
+.article-title {
+  margin-bottom: 10px;
+}
+
+.article-title + .article-title {
+  margin-top: 20px;
+}
+
+.article-text {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: var(--text-color);
+}
+
+.section__three-columns {
+  grid-template-columns: 1fr;
+}
+
+.section__gallery {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.section__gallery > .article-title {
+  margin-bottom: 0px;
+}
+
+.gallery__image {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  padding: 10px;
+  min-height: 647px;
+  align-items: center;
+}
+
+.footer + .titile {
+  margin: 0;
 }

@@ -4,6 +4,9 @@
 */
 :root {
   --background_image: url(../images/cover-image-dark.png);
-  --accent-color: #ff0070;
-  --title-color: #DB00FF;
+  --background-color: #000028;
+  --text-color: #F1B2CE;
+  --accent-color: rgb(255, 0, 112);
+  --accent-color-alpha: rgba(255, 0, 112, 0.4);
+  --title-color: rgb(219, 0, 255);
 }

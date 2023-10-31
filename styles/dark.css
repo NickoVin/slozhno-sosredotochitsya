@@ -10,23 +10,3 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
-
-.header {
-  background-image: var(--background_image);
-}
-
-.header__theme-menu-button {
-  color: var(--accent-color);
-}
-
-.header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
-}
-
-.rec {
-  color: var(--accent-color);
-}
-
-.dot {
-  background-color: var(--accent-color);
-}
