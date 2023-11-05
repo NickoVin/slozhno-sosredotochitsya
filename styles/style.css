@@ -13,7 +13,7 @@
 
 .header {
   display: grid;
-  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
   block-size: 100vh;
   box-sizing: border-box;
@@ -26,11 +26,13 @@
 
 .header__title {
   justify-self: start;
+  margin: 0;
 }
 
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: 25px;
+  align-self: center;
+  padding: 0px;
 }
 
 .header__theme-menu-list {
@@ -38,6 +40,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 0;
 }
 
 .header__theme-menu-button {
@@ -109,18 +112,19 @@
 .corner::before {
   content: '';
   display: block;
+  position: absolute;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--header-items-color);
   border-right: 1px solid var(--header-items-color);
   justify-self: end;
   align-self: start;
-  margin-block-start: var(--corner-offset);
 }
 
 .corner::after {
   content: '';
   display: block;
+  position: absolute;
   width: 25px;
   height: 25px;
   border-left: 1px solid var(--header-items-color);
@@ -137,7 +141,6 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--title-color);
-  margin: 50px 0 54px 0;
   text-shadow: 4px 4px var(--title-shade-color);
 }
 
@@ -151,7 +154,7 @@
 }
 
 .header__content {
-  margin-block-end: 31px;
+  align-self: center;
 }
 
 .header__content__text {
@@ -278,12 +281,7 @@
     padding: 20px;
   }
 
-  .header__theme-menu {
-    margin-block-start: 130px;
-  }
-
   .header__title {
-    margin-block-start: 160px;
     justify-self: start;
     margin-inline-start: -20px;
   }
@@ -291,8 +289,6 @@
   .header__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-block-start: 108px;
-    margin-block-end: 138px;
   }
 
   .text-decorator {
@@ -300,7 +296,7 @@
   }
 
   .main {
-    margin-block-start: 59px;
+    margin-block-start: 61px;
     padding: 0 20px 0 20px;
   }
 
@@ -378,10 +374,6 @@
 }
 
 @media (min-width: 1024px) {
-  .header {
-    --corner-offset: -25px;
-  }
-
   .general-title {
     --header-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --title-shade-color: rgba(255, 0, 112);
@@ -389,6 +381,7 @@
 
   .header__theme-menu {
     justify-self: center;
+    align-self: start;
     grid-row: 1/2;
     margin: 0;
   }
@@ -397,15 +390,6 @@
     flex-direction: row;
     padding: 0;
     margin: 0;
-  }
-
-  .header__title {
-    margin-block-start: 291px;
-  }
-
-  .header__content {
-    margin-block-start: 76px;
-    margin-block-end: 90px;
   }
 
   .leftside-title {

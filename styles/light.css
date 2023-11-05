@@ -16,7 +16,6 @@
     --accent-color-alpha: rgba(53, 52, 48, 0.4);
     --title-color: #FFC2E6;
     --title-shade-color: var(--accent-color);
-    --corner-offset: 0px;
     --section-title-color: var(--text-color);
     --header-items-color: var(--text-color);
     --rec-visibitity: hidden;
