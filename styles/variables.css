@@ -3,11 +3,14 @@
   и их переопределение под различные устройства
 */
 :root {
-  --background_image: url(../images/cover-image-dark.png);
-  --background-color: #000028;
-  --text-color: #F1B2CE;
-  --accent-color: rgb(255, 0, 112);
-  --accent-color-alpha: rgba(255, 0, 112, 0.4);
-  --title-color: rgb(219, 0, 255);
-  --corner-offset: 0px;
+    --background_image: url(../images/cover-image-dark.png);
+    --background-color: #000028;
+    --text-color: #F1B2CE;
+    --accent-color: rgb(255, 0, 112);
+    --accent-color-alpha: rgba(255, 0, 112, 0.4);
+    --title-color: rgb(219, 0, 255);
+    --corner-offset: 0px;
+    --section-title-color: var(--accent-color);
+    --header-items-color: var(--accent-color);
+    --rec-visibitity: visible;
 }
