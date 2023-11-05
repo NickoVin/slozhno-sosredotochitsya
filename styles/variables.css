@@ -13,4 +13,6 @@
     --section-title-color: var(--accent-color);
     --header-items-color: var(--accent-color);
     --rec-visibitity: visible;
+    --decore-text-color: rgb(0, 0, 40);
+    --title-shade-color: var(--accent-color);
 }
