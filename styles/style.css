@@ -69,13 +69,13 @@
   border-bottom: 1px solid var(--header-items-color);
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color-alpha);
+}
+
 .header__theme-menu-button_active {
   border: 1px solid var(--header-items-color);
   pointer-events: none;
-}
-
-.header__theme-menu-button:hover {
-  border-color: var(--accent-color-alpha);
 }
 
 .rec {
@@ -208,6 +208,10 @@
   font-weight: 400;
   line-height: 23.4px;
   color: var(--text-color);
+}
+
+.article-text + .article-text {
+  margin-block-start: 1em;
 }
 
 .upside-title {

@@ -3,6 +3,8 @@
   и их переопределение под различные устройства
 */
 :root {
+    --decore-text-color: rgb(0, 0, 40);
+    --title-shade-color: var(--accent-color);
     --background_image: url(../images/cover-image-dark.png);
     --background-color: #000028;
     --text-color: #F1B2CE;
@@ -12,7 +14,5 @@
     --section-title-color: var(--accent-color);
     --header-items-color: var(--accent-color);
     --rec-visibitity: visible;
-    --decore-text-color: rgb(0, 0, 40);
-    --title-shade-color: var(--accent-color);
     --header-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
